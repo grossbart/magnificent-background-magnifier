@@ -1,0 +1,27 @@
+1. BACKGROUND
+-------------------------------------------------------
+
+The Magnificent Background Magnifier script takes an image and stretches it so that it fills out the whole background of a website while keeping the aspect ratio of the image intact. This can be useful not only when you have an image where it's obvious when it's aspect ratio is messed up (i.e. like a portrait) but also if you want to keep the size of your image down and still have it stretch over the whole width of the website (hint: experiment with tiny images!).
+
+If you find errors or have an idea for future versions, feel free to email me.
+
+Peter Gassner
+peter@naehrstoff.ch
+http://www.naehrstoff.ch/code/mbm
+
+
+2. INSTALLATION
+-------------------------------------------------------
+
+Installation is easy, there are only two steps involved:
+
+(1)   Load the jquery.js and mbm.js files in your HTML head
+(2)   Specify a background image and margins for the body in your CSS
+
+Have a look at the example.html file to see how everything can be put together.
+
+If you have trouble with your layout, there are three hooks that you can use to style the generated JavaScript:
+
+(1)   #mbmWrapper -- this is a div that's wrapped around all your existing HTML code. This is necessary because Firefox doesn't yet allow for a negative z-index property and thus all existing HTML must be lifted above the background image, which has a z-index of 0.
+(2)   #mbmContainer -- this is the container for the background image. It is needed for the margins.
+(3)   #mbmImage -- this is the actual background image.
